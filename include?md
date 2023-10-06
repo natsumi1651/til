@@ -1,0 +1,15 @@
+# include? の使い方について。　　
+
+def array123(nums)
+ if nums.include?(1 && 2 && 3)  →　これはダメ。以下が正解。&&は一個一個書く必要がある。また、[]内の数字はeachメソッドをしなくて良い。　これで1/2/3すべて入っているものとそうでないものの振り分けができる。
+ if nums.include?(1) && nums.include?(2) && nums.include?(3)
+ puts "True"
+ else
+ puts "False"
+end
+  
+
+
+array123([1, 1, 2, 3, 1]) → True
+array123([1, 2, 4, ]) → False
+array123([1, 1, 2, 1, 4, 3]) → True
